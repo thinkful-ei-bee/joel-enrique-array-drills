@@ -1,26 +1,47 @@
-'use strict';
+// 'use strict';
 
-function max(numbers) {
-  // numbers.sort((a, b) => a - b);
-  let temp = [];
-  let count = 0;
-  while(count < numbers.length - 1){
-    if(numbers[count] < numbers[count + 1]){
-      temp.push(numbers[count]);
-    }
-    count++;
-  }
-  //return numbers[numbers.length - 1];
-  console.log(temp);
-  return temp[temp.length - 1];
-}
+// function max(numbers) {
+//   // numbers.sort((a, b) => a - b);
+//   let temp = [];
+//   let count = 0;
+//   while(count < numbers.length - 1){
+//     if(numbers[count] < numbers[count + 1]){
+//       temp.push(numbers[count]);
+//     }
+//     count++;
+//   }
+//   //return numbers[numbers.length - 1];
+//   console.log(temp);
+//   return temp[temp.length - 1];
+// }
 
-function min(numbers) {
-  numbers.sort((a, b) => a - b);
-  return numbers[0];
-}
+// function min(numbers) {
+//   numbers.sort((a, b) => a - b);
+//   return numbers[0];
+// }
+// const numList1 = [-5, 28, 98, -20013, 0.7878, 22, 115];
+// console.log(max(numList1));
+
+
 const numList1 = [-5, 28, 98, -20013, 0.7878, 22, 115];
 console.log(max(numList1));
+
+
+function max(arr){
+let currentMax = arr[0];
+let i = 1;
+
+while (i<arr.length){
+  i++;
+  if (arr[i]>currentMax){
+    currentMax = arr[i];
+  }
+}
+return currentMax;
+}
+
+
+
 /* From here down, you are not expected to 
    understand.... for now :)  
    
