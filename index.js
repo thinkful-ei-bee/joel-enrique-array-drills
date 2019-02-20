@@ -1,52 +1,41 @@
-// 'use strict';
-
-// function max(numbers) {
-//   // numbers.sort((a, b) => a - b);
-//   let temp = [];
-//   let count = 0;
-//   while(count < numbers.length - 1){
-//     if(numbers[count] < numbers[count + 1]){
-//       temp.push(numbers[count]);
-//     }
-//     count++;
-//   }
-//   //return numbers[numbers.length - 1];
-//   console.log(temp);
-//   return temp[temp.length - 1];
-// }
-
-// function min(numbers) {
-//   numbers.sort((a, b) => a - b);
-//   return numbers[0];
-// }
-// const numList1 = [-5, 28, 98, -20013, 0.7878, 22, 115];
-// console.log(max(numList1));
-
-
-const numList1 = [-5, 28, 98, -20013, 0.7878, 22, 115];
-console.log(max(numList1));
-
+'use strict';
 
 function max(arr){
-let currentMax = arr[0];
-let i = 1;
+  let currentMax = arr[0];
+  let i = 1;
 
-while (i<arr.length){
-  i++;
-  if (arr[i]>currentMax){
-    currentMax = arr[i];
+  while (i < arr.length){
+    i++;
+    if (arr[i] > currentMax){
+      currentMax = arr[i];
+    }
   }
+  return currentMax;
 }
-return currentMax;
+
+function min(arr){
+  let currentMin = arr[0];
+  let i = 1;
+
+  while (i < arr.length){
+    i++;
+    if (arr[i] < currentMin){
+      currentMin = arr[i];
+    }
+  }
+  return currentMin;
 }
 
 function computeAverage(arr){
   let total = 0;
-  arr.forEach(x=> total+= x)
+  arr.forEach(x=> total+= x);
   return total / arr.length;
 }
-numArr= [1,2,3,6];
-console.log(computeAverage(numArr));
+// let numArr = [1,2,3,6];
+// console.log(computeAverage(numArr));
+
+const numList1 = [-5, 28, 98, -20013, 0.7878, 22, 115];
+console.log(min(numList1));
 
 /* From here down, you are not expected to 
    understand.... for now :)  
