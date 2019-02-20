@@ -40,7 +40,13 @@ while (i<arr.length){
 return currentMax;
 }
 
-
+function computeAverage(arr){
+  let total = 0;
+  arr.forEach(x=> total+= x)
+  return total / arr.length;
+}
+numArr= [1,2,3,6];
+console.log(computeAverage(numArr));
 
 /* From here down, you are not expected to 
    understand.... for now :)  
